@@ -58,7 +58,7 @@ def save_to_csv(superheroes, filename="superheroes.csv"):
                 hero["biography"]["full-name"], 
                 hero["biography"]["publisher"], 
                 hero["appearance"]["gender"], 
-                hero["appearance"]["race"], 
+                hero["appearance"]["race"],
                 hero["work"]["occupation"]
             ])
 
