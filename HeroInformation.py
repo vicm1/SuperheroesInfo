@@ -40,7 +40,7 @@ def get_superhero_info(name):
         print(f"Failed to retrieve data {response.status_code}")
         return None
 
-def save_to_csv(superheroes, filename="C:\Users\capta\Desktop\Git\SuperheroesInfo\superheroes.csv"):
+def save_to_csv(superheroes, filename="HeroInformation\HeroInfo.csv"):
     file_exists = os.path.isfile(filename)
 
     with open(filename, mode="a", newline="", encoding="utf-8") as file:
@@ -62,7 +62,7 @@ def save_to_csv(superheroes, filename="C:\Users\capta\Desktop\Git\SuperheroesInf
                 hero["work"]["occupation"]
             ])
 
-def display_csv(filename="C:\Users\capta\Desktop\Git\SuperheroesInfo\superheroes.csv"):
+def display_csv(filename="HeroInformation\HeroInfo.csv"):
     if os.path.isfile(filename):
         df = pd.read_csv(filename)
         print("\nCurrent Superhero Database:\n")
