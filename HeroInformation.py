@@ -2,9 +2,9 @@ import requests
 import csv
 import os
 import pandas as pd  # Import pandas to read and display the CSV file
-from keys import TOKEN
+#from keys import TOKEN
 
-base_url = f"https://superheroapi.com/api/{TOKEN}"
+base_url = f"https://superheroapi.com/api/d13024da7f1b1b509cc50d8d8fe9cb57"
 
 # edge cases for superheroes that often get typed without spaces
 COMMON_HERO_CORRECTIONS = {
@@ -40,7 +40,7 @@ def get_superhero_info(name):
         print(f"Failed to retrieve data {response.status_code}")
         return None
 
-def save_to_csv(superheroes, filename="superheroes.csv"):
+def save_to_csv(superheroes, filename="C:\Users\capta\Desktop\Git\SuperheroesInfo\superheroes.csv"):
     file_exists = os.path.isfile(filename)
 
     with open(filename, mode="a", newline="", encoding="utf-8") as file:
@@ -62,7 +62,7 @@ def save_to_csv(superheroes, filename="superheroes.csv"):
                 hero["work"]["occupation"]
             ])
 
-def display_csv(filename="superheroes.csv"):
+def display_csv(filename="C:\Users\capta\Desktop\Git\SuperheroesInfo\superheroes.csv"):
     if os.path.isfile(filename):
         df = pd.read_csv(filename)
         print("\nCurrent Superhero Database:\n")
